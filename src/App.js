@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <p>TrybeTunes</p>
+        <h1>TrybeTunes</h1>
         <Switch>
           <Route path="/album/:id" component={ Album } />
           <Route path="/favorites" component={ Favorites } />
