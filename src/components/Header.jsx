@@ -9,6 +9,7 @@ class Header extends Component {
     this.state = {
       nome: '',
       onLoading: true,
+      // musicas: [],
     };
   }
 
@@ -21,6 +22,12 @@ class Header extends Component {
     this.setState({ nome: userName, onLoading: false });
   };
 
+  // validandoBotao = async (event) => {
+  //   this.state({ musicas });
+  //   musicas = event;
+  //   console.log('Estado-musicas no comp Header é:', musicas);
+  // }
+
   render() {
     const { nome, onLoading } = this.state;
     return (
@@ -28,9 +35,9 @@ class Header extends Component {
         { onLoading ? <Loading /> : (
           <header data-testid="header-component">
             <h3 data-testid="header-user-name">{nome.name}</h3>
-            <Link data-testid="link-to-search" to="/search">Search</Link>
-            <Link data-testid="link-to-favorites" to="/favorites">Favorites</Link>
-            <Link data-testid="link-to-profile" to="/profile">Profile</Link>
+            <Link data-testid="link-to-search" to="/search"> Search </Link>
+            <Link data-testid="link-to-favorites" to="/favorites"> Favorites </Link>
+            <Link data-testid="link-to-profile" to="/profile"> Profile </Link>
           </header>
         )}
       </div>

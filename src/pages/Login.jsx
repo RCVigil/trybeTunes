@@ -38,7 +38,6 @@ class Login extends Component {
     this.setState({ onLoading: true });
     const { history } = this.props;
     const { nome } = this.state;
-    console.log(nome);
     await createUser({ name: nome });
     history.push('/search');
   };
@@ -72,7 +71,6 @@ class Login extends Component {
             </button>
           </>
         )}
-        ;
       </div>
     );
   }
