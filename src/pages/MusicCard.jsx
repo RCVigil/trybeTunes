@@ -7,7 +7,7 @@ class MusicCard extends Component {
     const { trackName, previewUrl } = music;
     return (
       <div>
-        <h6>{trackName}</h6>
+        <h5>{trackName}</h5>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
