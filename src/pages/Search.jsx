@@ -79,13 +79,21 @@ class Search extends Component {
 
                 <div>
                   {searchTargetAlbum.map((album) => (
-                    <Link
-                      data-testid={ `link-to-album-${album.collectionId}` }
-                      key={ album.collectionId }
-                      to={ `/album/${album.collectionId}` }
-                    >
-                      <h4>{album.collectionName}</h4>
-                    </Link>
+                    <div key={ album.collectionId }>
+                      <br />
+                      <h3>
+                        {`${album.artistId} - `}
+                        {album.artistName}
+                      </h3>
+                      <br />
+                      <img src={ `${album.artworkUrl100}` } alt="Imagem do album" />
+                      <Link
+                        data-testid={ `link-to-album-${album.collectionId}` }
+                        to={ `/album/${album.collectionId}` }
+                      >
+                        <h6>{album.collectionName}</h6>
+                      </Link>
+                    </div>
                   ))}
                 </div>
               </>
