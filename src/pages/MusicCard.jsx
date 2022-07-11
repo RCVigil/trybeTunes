@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-class SongPlay extends Component {
+class MusicCard extends Component {
   render() {
     const { music } = this.props;
     const { trackName, previewUrl } = music;
@@ -20,8 +20,8 @@ class SongPlay extends Component {
   }
 }
 
-SongPlay.propTypes = {
+MusicCard.propTypes = {
   music: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default SongPlay;
+export default MusicCard;

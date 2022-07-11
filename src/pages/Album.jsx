@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
-import SongPlay from './SongPlay';
+import SongPlay from './MusicCard';
 
 class Album extends Component {
   constructor(props) {
@@ -22,7 +22,6 @@ class Album extends Component {
   requisition = async () => {
     const { match: { params: { id } } } = this.props;
     const musica = await getMusics(id);
-    console.log(musica);
     this.setState({
       artist: musica[0].artistName,
       collection: musica[0].collectionName,
