@@ -6,6 +6,7 @@ class Favorites extends Component {
     return (
       <div data-testid="page-favorites">
         <Header />
+        <h1> Adicionar favoritas aqui! </h1>
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
-// import { musica } from "../services/musicsAPI";
 import Loading from './Loading';
 
 class MusicCard extends Component {
@@ -9,15 +8,6 @@ class MusicCard extends Component {
     checkin: false,
     onLoading: false,
   }
-
-  // Ao favoritar uma música, aguarde o retorno da função addSong (que já foi implementada no requisito 8) e utilize a função getFavoriteSongs da favoriteSongsAPI para recuperar a lista de músicas favoritas.
-
-  // favoriteMusic = async () => {
-  //   this.setState({ onLoading: true });
-  //   const { music } = this.props;
-  //   console.log();
-  //   this.setState({ onLoading: false });
-  // }
 
   checkin = async () => {
     this.setState({ onLoading: true });
@@ -50,7 +40,6 @@ class MusicCard extends Component {
                   data-testid={ `checkbox-music-${trackId}` }
                   onChange={ this.checkin }
                   checked={ checkin }
-                  // value={ () => favoriteMusic }
                 />
 
               </label>
